@@ -1,6 +1,7 @@
 import React from "react";
 
 function CourseCard(course) {
+  console.log(course);
   return (
     <div className="course">
       <img src={course.image} alt="${course.alt}" height="135"></img>

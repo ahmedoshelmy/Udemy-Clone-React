@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-async function FetchCourses(courseName) {
+async function FetchCourses() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    const response = axios
-      .get(`http://localhost:3005/${courseName.replace(" ", "")}`)
-      .then(setData(response.json))
+    axios
+      .get(`http://localhost:3005`)
+      .then((res) => {
+        console.log(res);
+        // setData(response.json)
+      })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-  return <div />;
+  return (
+    <div>
+      <h1>HEllloooo</h1>
+    </div>
+  );
 }
 
 export default FetchCourses;

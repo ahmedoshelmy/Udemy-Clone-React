@@ -1,6 +1,7 @@
 import React from "react";
 
-function Courses_Section() {
+function Courses_Section(props) {
+  const data = props.data;
   return (
     <section className="courses-section">
       <div>
