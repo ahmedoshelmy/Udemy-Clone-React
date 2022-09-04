@@ -11,7 +11,7 @@ function Home(props) {
       <NavigationBar />
       <Header />
       <Courses_Section data={data} />
-      {/* <CourseCard {...course} /> */}
+      <CourseCard {...course} />
       {/* <CourseCard {...props.data[1]} /> */}
     </div>
   );
