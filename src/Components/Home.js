@@ -1,17 +1,18 @@
 import React from "react";
-import CoursesSection from "../Courses-Section";
+import CoursesSection from "./Courses-Section";
 import CourseCard from "./CourseCard";
 import Header from "./Header";
 import NavigationBar from "./NavigationBar";
-import Courses_Section from "../Courses-Section";
+import Courses_Section from "./Courses-Section";
+import Courses_Groups from "./GroupedCourses";
 function Home(props) {
-  const data = props.data;
+  console.log(props.data);
   return (
     <div>
       <NavigationBar />
       <Header />
-      <Courses_Section data={data} />
-      <CourseCard {...course} />
+      <Courses_Section data = {props.data}/>
+      {/* <CourseCard {...course} /> */}
       {/* <CourseCard {...props.data[1]} /> */}
     </div>
   );

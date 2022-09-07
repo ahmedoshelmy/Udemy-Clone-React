@@ -1,4 +1,5 @@
 import React from "react";
+import Courses_Groups from "./GroupedCourses";
 
 function Courses_Section(props) {
   const data = props.data;
@@ -24,7 +25,8 @@ function Courses_Section(props) {
         className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner" id="courses"></div>
+        <div className="carousel-inner" id="courses"><Courses_Groups courses={data}/></div>
+        
         <button
           className="carousel-control-prev"
           type="button"

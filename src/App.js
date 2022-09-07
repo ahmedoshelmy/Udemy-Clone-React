@@ -20,7 +20,7 @@ function App() {
   }, []);
   return (
     <Routes>
-      <Route path="/" element={<Home data={data} />} />
+      <Route path="/" element={<Home data={data}/>} />
       <Route path="Course-Details" element={<CourseDetails />} />
     </Routes>
   );

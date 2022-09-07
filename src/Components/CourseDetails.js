@@ -1,6 +1,6 @@
 import React from "react";
 
-function CourseDetails() {
+function CourseDetails(props) {
   return <div>CourseDetails</div>;
 }
 
