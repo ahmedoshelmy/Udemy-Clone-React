@@ -9,10 +9,10 @@ function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:3005/python`)
+      .get(`http://localhost:3005/summary`)
       .then((res) => {
-        console.log(res);
-        setData(res.data);
+        console.log(res.data[0].items);
+        setData(res.data[0].items);
       })
       .catch((error) => {
         console.log(error);

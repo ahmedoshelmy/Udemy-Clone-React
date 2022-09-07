@@ -12,8 +12,6 @@ function Home(props) {
       <NavigationBar />
       <Header />
       <Courses_Section data = {props.data}/>
-      {/* <CourseCard {...course} /> */}
-      {/* <CourseCard {...props.data[1]} /> */}
     </div>
   );
 }
