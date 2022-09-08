@@ -24,3 +24,7 @@
     color: blueviolet;
     text-decoration: underline;
 }
+.objective{
+    font-size: 13px;
+    justify-content: start;
+}
