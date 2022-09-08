@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Price from "./Price";
+import Rating_Stars from "./Rating_Stars";
+import Rating from "./Rating_Stars";
 
 function CourseCard(course) {
   console.log(course);
@@ -15,15 +18,8 @@ function CourseCard(course) {
         <h4 className="course-title">{course.title}</h4>
       </a>
       <p className="course-instructor">{course.visible_instructors[0].title}</p>
-      <div className="stars">
-        <i className="course-rate">{Math.round(course.rating * 10) / 10}</i>
-        <i className="fa fa-star checked"></i>
-        <i className="fa fa-star checked"></i>
-        <i className="fa fa-star checked"></i>
-        <i className="fa fa-star checked"></i>
-        <i className="fa-solid fa-star-half-stroke"></i>
-      </div>
-      <h4 className="course-price">E&#163;{course.price.list_price.amount}</h4>
+      <Rating_Stars rating = {course.rating}/>
+      <Price price ={course.price.list_price.amount}/>
       </Link>
     </div>
 

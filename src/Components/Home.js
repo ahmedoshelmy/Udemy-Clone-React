@@ -6,7 +6,7 @@ import NavigationBar from "./NavigationBar";
 import Courses_Section from "./Courses-Section";
 import Courses_Groups from "./GroupedCourses";
 import Add_to_Cart from "./PopUpCourse/Add to Cart";
-import PopUpCourse from "./PopUpCourse";
+import PopUpCourse from "./PopUpCourse/PopUpCourse";
 function Home(props) {
   console.log(props.data);
   return (
@@ -14,7 +14,6 @@ function Home(props) {
       <NavigationBar />
       <Header />
       <Courses_Section data = {props.data}/>
-      <PopUpCourse />
     </div>
   );
 }
