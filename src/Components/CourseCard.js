@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CourseCard(course) {
   console.log(course);
   return (
     <div className="course">
+          <Link to={`Course-Details/:${course.id}`}
+      state={{
+        course:course
+      }}
+    > 
       <img src={course.image_750x422} alt="${course.alt}" height="135"></img>
       <a href={course.image_750x422}>
         <h4 className="course-title">{course.title}</h4>
@@ -18,7 +24,9 @@ function CourseCard(course) {
         <i className="fa-solid fa-star-half-stroke"></i>
       </div>
       <h4 className="course-price">E&#163;{course.price.list_price.amount}</h4>
+      </Link>
     </div>
+
   );
 }
 

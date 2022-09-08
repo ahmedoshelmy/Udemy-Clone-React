@@ -21,7 +21,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home data={data}/>} />
-      <Route path="Course-Details" element={<CourseDetails />} />
+      <Route path="Course-Details/:id" element={<CourseDetails/>}/>
     </Routes>
   );
 }
