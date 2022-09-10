@@ -53,6 +53,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
 }
 .search-div {
   flex-grow: 1.5;
@@ -136,9 +137,9 @@ div button {
 /* Courses Section  */
 
 .courses-section {
-  padding: 1rem 1rem;
-  margin: auto;
-  width: 84rem;
+  /* padding: 1rem 1rem; */
+  margin: 20px;
+  width: 90rem;
 }
 ul {
   display: flex;
@@ -293,13 +294,13 @@ s {
 
 @media only screen and (max-width: 1400px) {
   .courses-section {
-    width: 90%;
+    width: 98%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   courses-section {
-    width: 80%;
+    width: 90%;
   }
   .courses h3 {
     font-size: 1rem;
@@ -366,7 +367,7 @@ s {
 
 .courses-section {
   border: 1px solid #d1d7dc;
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 
 .courses-list {
@@ -387,7 +388,7 @@ s {
 
 .course {
   width: 240px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .course-title {

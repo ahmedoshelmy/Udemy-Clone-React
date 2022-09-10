@@ -3,17 +3,32 @@ import { Link } from "react-router-dom";
 import Price from "./Price";
 import Rating_Stars from "./Rating_Stars";
 import Rating from "./Rating_Stars";
+import { useState,useEffect } from "react";
+import axios from "axios";
+function CourseCard(props) {
+  const course = props.course
+  const [course_detail, setcourse_detail] = useState([]);
+  useEffect(() => {
+      axios
+      .get(`http://localhost:3005/${course.id}`)
+      .then((res) => {
+        // console.log(res);
+        setcourse_detail(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-function CourseCard(course) {
-  console.log(course);
+  }, []);
   return (
     <div className="course">
           <Link to={`Course-Details/:${course.id}`}
       state={{
-        course:course
+        course:course,
+        course_detail:course_detail
       }}
     > 
-      <img src={course.image_750x422} alt="${course.alt}" height="135"></img>
+      <img className="course-img" src={course.image_750x422} alt="${course.alt}"></img>
       <a href={course.image_750x422}>
         <h4 className="course-title">{course.title}</h4>
       </a>

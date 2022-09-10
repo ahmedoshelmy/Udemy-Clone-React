@@ -28,3 +28,27 @@
     font-size: 13px;
     justify-content: start;
 }
+
+.card.drop-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 1rem;
+    width: 500px;
+}
+.drop-down-element{
+    font-weight: bold;
+}
+.drop-down-count{
+    justify-content: flex-end;
+}
+.course-details{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.card{
+    border-radius: 0px;
+}

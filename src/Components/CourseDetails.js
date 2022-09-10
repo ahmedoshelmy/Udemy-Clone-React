@@ -4,14 +4,15 @@ import Course_Details_Header from "./Course_Details/Course_Details_Header";
 import './Course_Details/Course_Details.css'
 import PopUpCourse from './PopUpCourse/PopUpCourse'
 import WhatYoullLearn from "./Course_Details/WhatYoullLearn";
+import CourseContent from "./Course_Details/CourseContent";
 
 function CourseDetails(props) { 
  const location = useLocation()
- const {course} = location.state
- console.log(course);
-  return <div>
+ const {course,course_detail} = location.state
+  return <div  className='course-details'>
     <Course_Details_Header course={course}/>
     <WhatYoullLearn data ={course.objectives_summary}/>
+    <CourseContent data={course_detail.curriculum_context.data.sections}/>
     <PopUpCourse course ={course}/>
   </div>;
 }

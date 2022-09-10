@@ -3,6 +3,9 @@ import Courses_Groups from "./GroupedCourses";
 
 function Courses_Section(props) {
   const data = props.data;
+  const courses_details = props.courses_details 
+  // console.log(courses_details);
+  const courses_reviews = props.courses_reviews
   return (
     <section className="courses-section">
       <div>
@@ -25,8 +28,9 @@ function Courses_Section(props) {
         className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner" id="courses"><Courses_Groups courses={data}/></div>
-        
+        <div className="carousel-inner" id="courses">
+          <Courses_Groups courses={data} courses_details={courses_details} courses_reviews={courses_reviews}/>
+          </div>
         <button
           className="carousel-control-prev"
           type="button"

@@ -2,7 +2,7 @@ import React from "react";
 
 function NavigationBar() {
   return (
-    <nav classNameName="top-navigation">
+    <nav classNameName="top-navigation sticky-top navbar">
       <a href="https://www.udemy.com">
         <img
           classNameName="logo"
