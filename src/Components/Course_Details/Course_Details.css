@@ -1,8 +1,11 @@
+
+/* Header  */
 .Course_Details_Header{
     height: 300px;
     background: #1C1D1F;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     /* height: auto; */
     text-align: left;
@@ -24,11 +27,16 @@
     color: blueviolet;
     text-decoration: underline;
 }
+
+/* what_you will_learn */
+
 .objective{
+    padding: 3px;
     font-size: 13px;
     justify-content: start;
 }
 
+/* Course Content  */
 .card.drop-down{
     display: flex;
     flex-direction: row;
@@ -36,14 +44,17 @@
     margin: 0px;
     padding: 1rem;
     width: 500px;
+    cursor: pointer;
 }
 .drop-down-element{
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -.02rem;
     font-size: 1.6rem;
+
 }
 .drop-down-count{
+    margin: 10px;
     justify-content: flex-end;
 }
 .course-details{
@@ -54,4 +65,26 @@
 }
 .card{
     border-radius: 0px;
+}
+.drop-down-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.course-content h3{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.what_youll_learn{
+    max-width: 70rem;
+    margin:2rem 2.4rem 1.6rem;
+}
+.what_youll_learn h3 {
+    margin: 10px;
+}
+.objectives-list{
+    padding: 10px;
+}
+.icon{
+    margin-right: 8px;
 }

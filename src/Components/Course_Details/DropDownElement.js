@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DropDownVideos from './DropDownVideos'
-
+import KeyboardArrowUpSharpIcon from '@mui/icons-material/KeyboardArrowUpSharp';
+import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 function DropDownElement(props) {
     const data = props.data
     const title = data.title
@@ -13,6 +14,7 @@ function DropDownElement(props) {
     <span className='drop-down card' onClick={()=>{
         setOpen(!open)
     }}>
+         {open?<KeyboardArrowDownSharpIcon fontSize="large"/>:<KeyboardArrowUpSharpIcon fontSize="large"/>}
         <h4 className='drop-down-element '>{title}</h4>
         <h5 className='drop-down-count-'>{count} Lectures.{duration} min</h5>
     </span>

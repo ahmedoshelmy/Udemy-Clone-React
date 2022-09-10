@@ -1,9 +1,9 @@
 import React from "react";
-
+import SearchIcon from '@mui/icons-material/Search';
 function NavigationBar() {
   return (
     <nav classNameName="top-navigation sticky-top navbar">
-      <a href="https://www.udemy.com">
+      <a href="/">
         <img
           classNameName="logo"
           src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
@@ -17,23 +17,26 @@ function NavigationBar() {
           Categories
         </a>
       </div>
-      <form className="search-div big" action="">
+      <form className="search-form big" action="/search/" role="search">
+        <span className="search-div big" >
         <div>
           <a className="icon big">
-            <i className="bi bi-search"></i>
+            <SearchIcon/>
           </a>
         </div>
         <input
           id="search-input"
           className="search-bar big"
-          type="text"
+          type="search"
           placeholder="Search for anything"
-          value=" "
+          value=""
         />
-      </form>
-      <button id="searchbutton" className="white-button">
+        </span>
+         <button type="submit" id="searchbutton" className="white-button">
         Search
       </button>
+      </form>
+     
       <a href="" id="udemy-business" className="big">
         Udemy Busines
       </a>
