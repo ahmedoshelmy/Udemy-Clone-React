@@ -38,7 +38,10 @@
     width: 500px;
 }
 .drop-down-element{
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.6rem;
 }
 .drop-down-count{
     justify-content: flex-end;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import DropDownVideos from './DropDownVideos'
 
 function DropDownElement(props) {
     const data = props.data
@@ -8,10 +9,15 @@ function DropDownElement(props) {
     const [open,setOpen] = useState(false)
     console.log(data);
   return (
-    <span className='drop-down card'>
+    <div>
+    <span className='drop-down card' onClick={()=>{
+        setOpen(!open)
+    }}>
         <h4 className='drop-down-element '>{title}</h4>
         <h5 className='drop-down-count-'>{count} Lectures.{duration} min</h5>
     </span>
+    {open?<DropDownVideos data={data.items} />:""}
+    </div>
   )
 }
 
