@@ -15,13 +15,14 @@ function groupCourses(data, n) {
         return <CourseCard course = {course} />
     })
   }
+  
 function Courses_Groups(props) {
   const courses_details = props.courses_details
   // console.log(courses_details);
   // console.log(props.courses);
-  const courses = props.courses
+    const courses = props.courses
     const grouped_courses = groupCourses(courses,5)
-   const Content =  grouped_courses.map((courses,i)=>{
+    const Content =  grouped_courses.map((courses,i)=>{
         return (
         <div className={`carousel-item ${(i === 0) ? "active" : ""}`}>
         <div className="courses" id="courses">
