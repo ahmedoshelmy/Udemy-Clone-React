@@ -1,10 +1,15 @@
 import React from "react";
 import Courses_Groups from "./GroupedCourses";
+import { useSearchParams } from "react-router-dom";
+import { Button } from "@mui/material";
+import { useState } from "react";
+
+
 
 function Courses_Section(props) {
   const data = props.data;
+  console.log(data);
   const courses_details = props.courses_details 
-  // console.log(courses_details);
   const courses_reviews = props.courses_reviews
   return (
     <section className="courses-section">

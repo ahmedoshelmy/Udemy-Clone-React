@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
-function NavigationBar() {
+import { useSearchParams } from "react-router-dom";
+function NavigationBar(props) {
+  const onChange = props.onChange 
+  const onClick = props.onClick
   return (
-    <nav classNameName="top-navigation sticky-top navbar">
+    <nav className="top-navigation sticky-top navbar">
       <a href="/">
         <img
-          classNameName="logo"
+          className="logo"
           src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
           width="91"
           height="34"
@@ -17,7 +20,7 @@ function NavigationBar() {
           Categories
         </a>
       </div>
-      <form className="search-form big" action="/search/" role="search">
+      <form className="search-form big" action="" role="search">
         <span className="search-div big" >
         <div>
           <a className="icon big">
@@ -29,10 +32,10 @@ function NavigationBar() {
           className="search-bar big"
           type="search"
           placeholder="Search for anything"
-          value=""
+          onChange={onChange}
         />
         </span>
-         <button type="submit" id="searchbutton" className="white-button">
+         <button type="button" id="searchbutton" className="white-button" onClick={onClick}>
         Search
       </button>
       </form>

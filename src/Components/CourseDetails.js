@@ -8,11 +8,13 @@ import CourseContent from "./Course_Details/CourseContent";
 import NavigationBar from "./NavigationBar";
 import Requirements from "./Course_Details/Requirements";
 import Description from "./Course_Details/Description";
+import { useSearchParams } from "react-router-dom";
 
 function CourseDetails(props) { 
  const location = useLocation()
  const {course,course_detail} = location.state
  console.log(course_detail);
+ 
   return <div  className='course-details'>
     <NavigationBar />
     <PopUpCourse course ={course}/>
