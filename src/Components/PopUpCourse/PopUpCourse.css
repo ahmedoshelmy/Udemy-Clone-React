@@ -14,9 +14,17 @@
     height: 40px;
   }
   .popup-course{
+    position: fixed;
     width: 300px;
+    float: right;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: flex-end;
+    top: 90px;
+    right: 10px;
     flex-direction: column;
+  }
+  .pop-course-img{
+    max-width: 100%;
   }
