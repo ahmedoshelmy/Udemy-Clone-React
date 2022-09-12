@@ -13,6 +13,14 @@ function PopUpCourse(props) {
         <Add_to_Cart/>
         <Buy_now />
         <h3>This course includes</h3>
+        <ul className='include-list'>
+          <li>14 hours on-demand video</li>
+          <li>3 articles</li>
+          <li>3 downloadable resources</li>
+          <li>Full-time access</li>
+          <li>Certificate of completion</li>
+
+        </ul>
     </div>
   )
 }
