@@ -1,4 +1,5 @@
 import React from 'react'
+import ShowMore from './ShowMore'
 
 function Description(props) {
     const data = props.data
@@ -6,7 +7,7 @@ function Description(props) {
     <div>
       <h2>Description</h2>
       <div className='Requirements-div'>
-      <p>{data}</p>
+      <ShowMore data={data} />
       </div>
     </div>
   )

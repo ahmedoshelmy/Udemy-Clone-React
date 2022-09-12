@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import CourseDetails from "./Components/CourseDetails";
+import CourseDetails from "./Components/Course_Details/CourseDetails";
 import FetchCourses from "./Data/FetchCourses";
 import Home from "./Components/Home";
 import React, { useEffect, useState } from "react";

@@ -282,6 +282,9 @@ s {
   .top-navigation {
     width: 100%;
   }
+  .popup-course.card{
+  display: none;
+  }
 }
 
 @media only screen and (max-width: 800px) {
