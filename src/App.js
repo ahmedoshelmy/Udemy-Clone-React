@@ -60,9 +60,9 @@ const onClick = () =>{
   setSearchParams(searchState)
   searchParams && setCourses(filter_courses(searchState,data))
 }
-useEffect (()=>{
-  setCourses(data)
-},[data])
+// useEffect (()=>{
+//   setCourses(data)
+// },[data])
   return (
     <div>
      <NavigationBar onChange={onChange} onClick={onClick}/>

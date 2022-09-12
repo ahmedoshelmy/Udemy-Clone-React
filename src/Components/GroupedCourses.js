@@ -19,7 +19,7 @@ function groupCourses(data, n) {
 function Courses_Groups(props) {
   const courses_details = props.courses_details
   // console.log(courses_details);
-  // console.log(props.courses);
+  console.log(props.courses);
     const courses = props.courses
     const grouped_courses = groupCourses(courses,5)
     const Content =  grouped_courses.map((courses,i)=>{
