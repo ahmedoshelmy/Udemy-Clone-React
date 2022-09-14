@@ -4,6 +4,12 @@ import { useSearchParams } from "react-router-dom";
 function NavigationBar(props) {
   const onChange = props.onChange 
   const onClick = props.onClick
+  const keyboardPress = (event) => {
+    if (event.key === 'Enter'){
+      onClick()
+      console.log("Enter!")
+    } 
+        }
   return (
     <nav className="top-navigation sticky-top navbar">
       <a href="/">
@@ -20,7 +26,7 @@ function NavigationBar(props) {
           Categories
         </a>
       </div>
-      <form className="search-form big" action="" role="search">
+      <form className="search-form big" action="" role="search" onKeyDown={keyboardPress}>
         <span className="search-div big" >
         <div>
           <a className="icon big">

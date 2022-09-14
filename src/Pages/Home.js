@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
-import CoursesSection from "../Components/Courses-Section";
-import CourseCard from "../Components/CourseCard";
-import Header from "../Components/Header";
-import NavigationBar from "../Components/NavigationBar";
-import Courses_Section from "../Components/Courses-Section";
+import React, { useContext, useEffect } from "react";
+import CoursesSection from "../Components/Courses-Section/Courses-Section";
+import CourseCard from "../Components/CourseCard/CourseCard";
+import Header from "../Components/Header/Header";
+import NavigationBar from "../Components/NavigationBar/NavigationBar";
+import Courses_Section from "../Components/Courses-Section/Courses-Section";
 import Courses_Groups from "../Components/GroupedCourses";
 import Add_to_Cart from "../Components/PopUpCourse/Add to Cart";
 import PopUpCourse from "../Components/PopUpCourse/PopUpCourse";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import { DataContext } from "../App";
 function filter_courses(filter_value,courses){
   filter_value = filter_value.toUpperCase()
   courses = courses.filter(
@@ -19,7 +20,7 @@ function filter_courses(filter_value,courses){
   return courses
 }
 function Home(props) {
-  const data = props.data 
+  const data = useContext(DataContext)
   const courses_reviews = props.courses_reviews
   const courses_details = props.courses_details
   const [courses,setCourses] = useState(props.data)

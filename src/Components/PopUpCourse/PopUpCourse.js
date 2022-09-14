@@ -3,7 +3,7 @@ import Add_to_Cart from './Add to Cart'
 import Buy_now from './Buy_now'
 import './PopUpCourse.css'
 import Course_Detail_Img from '../Course_Details/Course_Detail_Img'
-import Price from '../Price'
+import Price from '../CourseCard/Price'
 function PopUpCourse(props) {
   const course = props.course
   return (

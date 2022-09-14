@@ -1,0 +1,37 @@
+
+.head-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85rem;
+    position: relative;
+    background-color: #f8f9fb;
+    margin: auto;
+    padding: 1rem 2rem;
+  }
+  /* .card {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background-color: white;
+  } */
+  .head-bar {
+    background-color: white;
+    width: 30rem;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    margin-top: 3rem;
+    height: 12rem;
+  }
+  .head-bar h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .head-bar h3 {
+    font-size: 1.2rem;
+  }
+  
+  .alarmphoto {
+    width: 35%;
+  }
+  

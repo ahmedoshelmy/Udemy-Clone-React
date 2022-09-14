@@ -3,7 +3,6 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import FetchCourses from "./Data/FetchCourses";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

@@ -5,7 +5,7 @@ import '../Components/Course_Details/Course_Details.css'
 import PopUpCourse from '../Components/PopUpCourse/PopUpCourse'
 import WhatYoullLearn from "../Components/Course_Details/WhatYoullLearn";
 import CourseContent from "../Components/Course_Details/CourseContent";
-import NavigationBar from "../Components/NavigationBar";
+import NavigationBar from "../Components/NavigationBar/NavigationBar";
 import Requirements from "../Components/Course_Details/Requirements";
 import Description from "../Components/Course_Details/Description";
 import { useSearchParams } from "react-router-dom";

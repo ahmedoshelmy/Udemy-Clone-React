@@ -1,5 +1,5 @@
 import React from 'react'
-import Rating_Stars from '../Rating_Stars'
+import Rating_Stars from '../CourseCard/Rating_Stars'
 import Course_Detail_Img from './Course_Detail_Img'
 function Course_Details_Header(props) {
     const course = props.course

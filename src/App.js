@@ -1,11 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import CourseDetails from "./Pages/CourseDetails";
-import FetchCourses from "./Data/FetchCourses";
 import Home from "./Pages/Home";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import NavigationBar from "./Components/NavigationBar";
+import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import { useSearchParams } from "react-router-dom";
 function filter_courses(filter_value,courses){
   filter_value = filter_value.toUpperCase()
@@ -15,16 +14,20 @@ function filter_courses(filter_value,courses){
   console.log(filter_value,courses);
   return courses
 }
+export const DataContext = React.createContext();
+
 function App() {
   const [courses_details, setcourses_details] = useState([]);
   const [courses_reviews,setcourses_reviews] = useState ([])
   const [courses,setCourses] = useState([])
+  const [filtered_courses,setFilteredCourses] = useState([])
   useEffect(() => {
     axios
       .get(`http://localhost:3005/summary`)
       .then((res) => {
         // console.log(res);
         setCourses(res.data[0].items);
+        setFilteredCourses(res.data[0].items)
       })
       .catch((error) => {
         console.log(error);
@@ -49,7 +52,6 @@ function App() {
       });
 
   }, []);
-  const data = courses
   const [searchState,setSearchState] = useState("")
   const [searchParams,setSearchParams] = useSearchParams("")
   const onChange = (event) => {
@@ -58,18 +60,18 @@ function App() {
 }
 const onClick = () =>{
   setSearchParams(searchState)
-  searchParams && setCourses(filter_courses(searchState,data))
+  searchParams && setFilteredCourses(filter_courses(searchState,courses))
 }
-// useEffect (()=>{
-//   setCourses(data)
-// },[data])
+
   return (
     <div>
      <NavigationBar onChange={onChange} onClick={onClick}/>
+     <DataContext.Provider value={filtered_courses}>
     <Routes>
-      <Route path="/" element={<Home data={courses} courses_details={courses_details}  courses_reviews={courses_reviews}  />} />
+      <Route path="/" element={<Home data={filtered_courses} courses_details={courses_details}  courses_reviews={courses_reviews}  />} />
       <Route path="Course-Details/:id" element={<CourseDetails/>}/>
     </Routes>
+    </DataContext.Provider>
     </div>
   );
 }
