@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Udemy-Clone-React/static/css/main.0e4b8e51.css",
+    "main.js": "/Udemy-Clone-React/static/js/main.fde88b24.js",
+    "index.html": "/Udemy-Clone-React/index.html",
+    "main.0e4b8e51.css.map": "/Udemy-Clone-React/static/css/main.0e4b8e51.css.map",
+    "main.fde88b24.js.map": "/Udemy-Clone-React/static/js/main.fde88b24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e4b8e51.css",
+    "static/js/main.fde88b24.js"
+  ]
+}
