@@ -4,8 +4,8 @@ import CourseCard from "../Components/CourseCard/CourseCard";
 import Header from "../Components/Header/Header";
 import NavigationBar from "../Components/NavigationBar/NavigationBar";
 import Courses_Section from "../Components/Courses-Section/Courses-Section";
-import Courses_Groups from "../Components/GroupedCourses";
-import Add_to_Cart from "../Components/PopUpCourse/Add to Cart";
+import Courses_Groups from "../Components/Courses-Section/GroupedCourses";
+import Add_to_Cart from "../Components/AddtoCart/Add to Cart";
 import PopUpCourse from "../Components/PopUpCourse/PopUpCourse";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@mui/material";
@@ -39,7 +39,6 @@ useEffect (()=>{
 },[data])
   return (
     <div>
-      {/* <NavigationBar onChange={onChange} onClick={onClick}/> */}
       <Header />
       <Courses_Section data = {courses} courses_details={courses_details} courses_reviews={courses_reviews}/>
     </div>

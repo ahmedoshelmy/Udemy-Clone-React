@@ -1,5 +1,5 @@
 import React from 'react'
-import Add_to_Cart from './Add to Cart'
+import Add_to_Cart from '../AddtoCart/Add to Cart'
 import Buy_now from './Buy_now'
 import './PopUpCourse.css'
 import Course_Detail_Img from '../Course_Details/Course_Detail_Img'

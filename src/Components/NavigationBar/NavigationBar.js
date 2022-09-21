@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import { useSearchParams } from "react-router-dom";
+import "./NavigationBar.css"
 function NavigationBar(props) {
   const onChange = props.onChange 
   const onClick = props.onClick

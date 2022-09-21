@@ -7,6 +7,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import { OverlayTrigger, Popover, PopoverBody, Tooltip } from "react-bootstrap";
 import HoverCard from "../HoverCard/HoverCard";
+import "./CourseCard.css"
 
 function CourseCard(props) {
   const course = props.course
@@ -33,12 +34,12 @@ function CourseCard(props) {
 
     <OverlayTrigger 
     delay={{ show: 250, hide: 250 }} className='tippycard' overlay={popover} placement='top-end' trigger={['hover', 'focus']} interactive={true} >
-      {/* <Link to={`Course-Details/:${course.id}`}
+      <Link to={`Course-Details/:${course.id}`}
     state={{
       course:course,
       course_detail:course_detail
     }}
-  > */}
+  >
     <div className="course">
       <img className="course-img" src={course.image_750x422} alt="${course.alt}"></img>
       <a href={course.image_750x422}>
@@ -48,7 +49,7 @@ function CourseCard(props) {
       <Rating_Stars rating = {course.rating}/>
       <Price price ={course.price.list_price.amount}/>
     </div>
-    {/* </Link> */}
+    </Link>
     </OverlayTrigger>
   );
 }

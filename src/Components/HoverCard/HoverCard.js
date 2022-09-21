@@ -1,4 +1,5 @@
-import React from 'react'
+import Add_to_Cart from '../AddtoCart/Add to Cart'
+import FavoriteIcon from './FavoriteIcon';
 import "./HoverCard.css"
 function HoverCard(props) {
     const course = props.course
@@ -14,8 +15,8 @@ function HoverCard(props) {
     <p className='headline'>{course.headline}</p>
     {/* <ObjComp objList={course.objectives_summary} className='objectives'/> */}
     <div className='hoverbuttons'>
-        <button className='_cart'>Add to cart</button>
-        <button className=' _fav'><span className="material-symbols-outlined fav_icon">favorite</span></button>
+       <Add_to_Cart />
+        <FavoriteIcon />
     </div>
 </div>
   )

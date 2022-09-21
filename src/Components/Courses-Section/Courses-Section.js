@@ -3,7 +3,7 @@ import Courses_Groups from "./GroupedCourses";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@mui/material";
 import { useState } from "react";
-
+import "./Courses-Section.css"
 
 
 function Courses_Section(props) {
