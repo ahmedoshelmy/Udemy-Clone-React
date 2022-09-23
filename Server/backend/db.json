@@ -11,11 +11,6 @@
             "title": "Learning Python for Data Analysis and Visualization"
         },
         {
-            "description": "Take one of Udemys range of C++ courses and learn how to code using this incredibly useful language",
-            "id": "222",
-            "title": "Learn C++: The Complete C++ Programming Course"
-        },
-        {
             "description": "Testing the UUID",
             "id": "12222",
             "title": "UUID Python"
@@ -29,6 +24,21 @@
             "description": "Testing the UUID",
             "id": "532eba98-20a2-498b-beca-b30d53d1c2b7",
             "title": "UUID C++"
+        },
+        {
+            "description": "Testing the UUID",
+            "id": "a824e533-8f12-4e6c-9f0f-e6f6505e6c74",
+            "title": "UUID Ruby"
+        },
+        {
+            "description": "Testing the UUID",
+            "id": "dd62d580-3a7d-49fe-ad65-b3dd6d4fbeef",
+            "title": "U"
+        },
+        {
+            "description": "Testing the UUID",
+            "id": "c2aad301-4232-4a32-843c-eeec73956bf8",
+            "title": "ddddd"
         }
     ]
 }
