@@ -8,16 +8,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from rest_framework import status
 from .forms import CourseForm
 from .models import CourseModel
-
-with open('db.json', 'r') as data:
-    json_object = json.load(data)
-    courses = json_object['courses']
-
-
-def update_file():
-    open("db.json", "w").write(
-        json.dumps(json_object, sort_keys=True, indent=4, separators=(',', ': '))
-    )
+from django.core import serializers
 
 
 def add_new_course(payload):
@@ -29,28 +20,36 @@ def add_new_course(payload):
 
 
 def update_course(payload):
-    for item in courses:
-        if item['id'] == payload['id']:
-            item['title'] = payload['title']
-            item['description'] = payload['description']
-            update_file()
-            return JsonResponse({"status": "Edited successfully"}, status=status.HTTP_202_ACCEPTED)
-    return JsonResponse({"error ": "Can't edit the course"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+    f = CourseForm(payload)
+    if not f.is_valid():
+        return JsonResponse(data=json.loads(f.errors.as_json()))
+    CourseModel.objects.filter(id=payload['id']).update(**f.cleaned_data)
+    return JsonResponse({"status ": "Course Edited Successfully"}, status=status.HTTP_201_CREATED)
 
 
 def delete_course(payload):
-    target_id = payload['id']
-    print('Target', target_id)
-    for i in range(len(courses)):
-        if courses[i]['id'] == target_id:
-            courses.pop(i)
-            return JsonResponse({"status": "deleted"}, status=status.HTTP_200_OK)
-    return JsonResponse({"error": "Not deleted"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+    f = CourseForm(payload)
+    if not f.is_valid():
+        return JsonResponse(data=json.loads(f.errors.as_json()))
+    CourseModel.objects.filter(id=payload['id']).delete()
+    return JsonResponse({"status ": "Course Deleted Successfully"}, status=status.HTTP_201_CREATED)
+
+
+def organize(payload):
+    result = []
+    for i in payload:
+        result.append(i['fields'])
+    return result
 
 
 class home(View):
     def get(self, request, *args, **kwargs):
-        return JsonResponse(courses, safe=False)
+        users = CourseModel.objects.all()
+        data = serializers.serialize('json', users, fields=("title", "description"))
+        json_data = json.loads(data)
+        final_json_data = organize(json_data)
+        print(final_json_data)
+        return JsonResponse(final_json_data, status=status.HTTP_201_CREATED, safe=False)
 
     def post(self, request, *args, **kwargs):
         payload = json.loads(request.body)
